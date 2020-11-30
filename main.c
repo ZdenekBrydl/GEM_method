@@ -103,7 +103,6 @@ void primy_chod(FILE *f, float matice[11][10], int x)
 void zpetny_chod(FILE *f, float matice[11][10], int x)
 {
     int i, k;
-    x--;
     for(k=x-1; k>=0; k--)
     {
         for(i=k+1; i<x; i++)
@@ -125,6 +124,7 @@ void zpetny_chod(FILE *f, float matice[11][10], int x)
 
 void resitelnost(FILE *f, float matice[11][10], int x)
 {
+    x--;
     if(matice[x-2][x-2]!=0)
     {
         zpetny_chod(f, matice, x);
